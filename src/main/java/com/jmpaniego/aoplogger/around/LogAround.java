@@ -11,6 +11,7 @@ import java.time.temporal.ChronoUnit;
 @Documented
 public @interface LogAround {
   Level level() default Level.DEFAULT;
+  Level errorLevel() default Level.ERROR;
   String enteringMessage() default "";
   String exitedMessage() default "";
   String elapsedMessage() default "";

@@ -37,7 +37,7 @@ public class LogAroundService {
   }
 
   private void logExitedAbnormallyMessage(ProceedingJoinPoint joinPoint, LogAround logAround, Logger logger, Throwable e) {
-    final Level exitedAbnormallyLevel = logAround.level();
+    final Level exitedAbnormallyLevel = logAround.errorLevel();
     if (isLoggerLevelDisabled(logger, exitedAbnormallyLevel)) {
       return;
     }
